@@ -10,6 +10,12 @@
 
 `docker network create <network-name>`
 
+#### Use docker-compose
+
+- add authentication information in `auth.env` (password), or set `NEO4J_AUTH=none`
+- check the path for the volumes (default: `./data`) and the network name (that you created before)
+- run `docker-compose up`
+
 ##### Run a NEO4J container
 
 without authentication:
@@ -19,8 +25,7 @@ without authentication:
 
 with authentication:
 - default password: `docker run --volume=<path-to-shared-volume-on-host>:/data --restart always --name <name-container> --net <network-name> -d neo4j` login: `neo4j` / password: `neo4j`
-- changed password: 
-- default password: `docker run --volume=<path-to-shared-volume-on-host>:/data --restart always --env NEO4J_AUTH=neo4j/<password> --name <name-container> --net <network-name> -d neo4j` --> login: `neo4j` / password: `<password>`
+- changed password: `docker run --volume=<path-to-shared-volume-on-host>:/data --restart always --env NEO4J_AUTH=neo4j/<password> --name <name-container> --net <network-name> -d neo4j` --> login: `neo4j` / password: `<password>`
 
 warning: If you want to change the password, you'll have to empty the shared volume. There's possible bug with the authentication if you are using a previously used shared volume when re-creating the container.  
 

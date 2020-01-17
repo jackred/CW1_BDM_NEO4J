@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  neo4j:
+    container_name: neo4j_db
+    image: "neo4j:latest"
+    volumes:
+      - ./data:/data
+    restart: always
+    env_file:
+      - auth.env
+networks:
+  default:
+    external:
+      name: db_network
