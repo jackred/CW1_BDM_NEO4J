@@ -96,7 +96,7 @@ cypher-shell
 ```
 
 
-### Troubleshoting
+### Troubleshooting
 
 #### Increase memory
 
