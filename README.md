@@ -2,6 +2,9 @@
 
 ## NEO4J
 
+Note: if your user is not in the `docker` group, using `sudo` will be necessary to do most command.  
+[Docker Linux PostInstall instruction](https://docs.docker.com/install/linux/linux-postinstall/)
+
 ### Installation
 
 #### Docker
