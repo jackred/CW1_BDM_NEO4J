@@ -17,7 +17,7 @@ Note: if your user is not in the `docker` group, using `sudo` will be necessary 
 
 - add authentication information in `auth.env` (password), or set `NEO4J_AUTH=none`
 - check the path for the volumes (default: `./data`) and the network name (that you created before)
-- run `docker-compose up`
+- run `docker-compose up` You can `-d` if you want to run it in background as a daemon.
 
 ##### Or run a NEO4J container directly
 
